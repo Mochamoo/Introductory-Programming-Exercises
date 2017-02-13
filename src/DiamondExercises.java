@@ -24,4 +24,52 @@ public class DiamondExercises extends TriangleExercises {
         return result;
     }
 
+    public String drawDiamond(int depthToCentre) {
+        String result = "";
+        int numSpaces = 1;
+
+        result = drawIsoscelesTriangle(depthToCentre);
+        result += "\n";
+
+        for(int i = depthToCentre - 2; i >= 0; --i) {
+            result += insertSpace(numSpaces);
+            result += drawHorizontalLine((i * 2) + 1);
+            if(i == 0) {
+                break;
+            }
+            result += "\n";
+
+            ++numSpaces;
+        }
+
+        return result;
+    }
+
+    public String drawDiamondWithName(int depth) {
+        String result = "";
+        int numSpaces = depth - 1;
+
+        for(int i = 0; i < depth - 1; ++i) {
+            result += insertSpace(numSpaces) + drawHorizontalLine((i * 2) + 1);
+            result += "\n";
+
+            --numSpaces;
+        }
+
+        result += "Eugene\n";
+        numSpaces = 1;
+
+        for(int i = depth - 2; i >= 0; --i) {
+            result += insertSpace(numSpaces);
+            result += drawHorizontalLine((i * 2) + 1);
+            if(i == 0) {
+                break;
+            }
+            result += "\n";
+
+            ++numSpaces;
+        }
+
+        return result;
+    }
 }

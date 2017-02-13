@@ -13,7 +13,19 @@ public class DiamondExercisesTest {
 
     @Test
     public void testDrawIsoscelesTriangle() {
-        System.out.println(dia.drawIsoscelesTriangle(3));
         assertEquals("  *\n ***\n*****", dia.drawIsoscelesTriangle(3));
     }
+
+    @Test
+    public void testDrawDiamond() {
+        String expected = "  *\n ***\n*****\n ***\n  *";
+        assertEquals(expected, dia.drawDiamond(3));
+    }
+
+    @Test
+    public void testDrawDiamondWithName() {
+        String expected = "  *\n ***\nEugene\n ***\n  *";
+        assertEquals(expected, dia.drawDiamondWithName(3));
+    }
+
 }
