@@ -13,6 +13,7 @@ public class DiamondExercisesTest {
 
     @Test
     public void testDrawIsoscelesTriangle() {
-        //assertEquals("  *\n *** \n*****", dia.DrawIsoscelesTriangle(3));
+        System.out.println(dia.drawIsoscelesTriangle(3));
+        assertEquals("  *\n ***\n*****", dia.drawIsoscelesTriangle(3));
     }
 }

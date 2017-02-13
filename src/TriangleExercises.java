@@ -20,13 +20,15 @@ public class TriangleExercises {
         String result = "";
 
         for(int i = 0; i < numAsterisk; ++i) {
+            result += "*";
+
             //This just does away with newline for last * so we
             //don't get an extra newline and can use println()
             if(i == numAsterisk - 1) {
-                result += "*";
                 break;
             }
-            result += "*\n";
+
+            result += "\n";
         }
 
         return result;
@@ -36,11 +38,13 @@ public class TriangleExercises {
         String result = "";
 
         for(int i = 0; i < triDepth; ++i) {
+            result += drawHorizontalLine(i + 1);
+
             if(i == triDepth - 1) {
-                result += drawHorizontalLine(i + 1);
                 break;
             }
-            result += drawHorizontalLine(i + 1) + "\n";
+
+            result += "\n";
         }
 
         return result;
