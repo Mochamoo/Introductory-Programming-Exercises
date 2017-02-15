@@ -14,15 +14,15 @@ public class PrimeFactorsExerciseTest {
     }
 
     @Test
-    public void testGetPrimeNumbers() {
+    public void testGenerate() {
         //If input is 1, should get back an empty list
         ArrayList<Integer> list = new ArrayList<>();
-        assertEquals(list, prime.getPrimeNumbers(1));
+        assertEquals(list, prime.generate(1));
 
         //Now test with 30 as input
         list.add(2);
         list.add(3);
         list.add(5);
-        assertEquals(list, prime.getPrimeNumbers(30));
+        assertEquals(list, prime.generate(30));
     }
 }

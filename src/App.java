@@ -19,7 +19,7 @@ public class App {
 
         PrimeFactorsExercise prime = new PrimeFactorsExercise();
         System.out.println("===Prime Factors Exercise===");
-        System.out.println(prime.getPrimeNumbers(30) + "\n");
+        System.out.println(prime.generate(30) + "\n");
 
     }
 

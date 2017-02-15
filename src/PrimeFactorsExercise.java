@@ -47,7 +47,7 @@ public class PrimeFactorsExercise {
     }
 
 
-    public ArrayList getPrimeNumbers(int n) {
+    public ArrayList generate(int n) {
         ArrayList<Integer> primeNums = new ArrayList<>();
         //Use this divisor to divide n and see if it fits
         int divisor = 2;
