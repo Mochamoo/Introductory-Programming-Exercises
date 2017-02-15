@@ -26,8 +26,3 @@ public class PrimeFactorsExerciseTest {
         assertEquals(list, prime.getPrimeNumbers(30));
     }
 }
-
-//Helpful links for this exercise
-//http://virtualnerd.com/pre-algebra/factors-fractions-exponents/prime-factorization-greatest-common-factor/prime-factorization/prime-factorization-by-tree
-//http://stackoverflow.com/questions/1538644/c-determine-if-a-number-is-prime
-//http://stackoverflow.com/questions/5811151/why-do-we-check-up-to-the-square-root-of-a-prime-number-to-determine-if-it-is-pr
