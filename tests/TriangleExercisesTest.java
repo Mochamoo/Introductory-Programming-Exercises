@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TriangleExercisesTest {
-    TriangleExercises tri;
+    private TriangleExercises tri;
 
     @Before
     public void setup() {

@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class DiamondExercisesTest {
-    DiamondExercises dia;
+    private DiamondExercises dia;
 
     @Before
     public void setup() {

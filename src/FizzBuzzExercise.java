@@ -21,10 +21,10 @@ public class FizzBuzzExercise {
         return result;
     }
 
-    public String fizzBuzzSample(int n) {
+    public String fizzBuzz() {
         String result = "";
 
-        for(int i = 1; i <= n; ++i) {
+        for(int i = 1; i <= 100; ++i) {
             if((i % 3 == 0) || (i % 5 == 0)) {
                 if(i % 3 == 0) {
                     result += "Fizz";

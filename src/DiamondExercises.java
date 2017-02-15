@@ -1,8 +1,9 @@
 //This class is for the diamond exercises
-public class DiamondExercises extends TriangleExercises {
-    //Method to insert spaces into pyramid
-    private String insertSpace(int numSpaces) {
-        return new String(new char[numSpaces]).replace("\0", " ");
+class DiamondExercises {
+    private Helper helper;
+
+    public DiamondExercises() {
+        helper = new Helper();
     }
 
     public String drawIsoscelesTriangle(int triDepth) {
@@ -10,10 +11,10 @@ public class DiamondExercises extends TriangleExercises {
         int numSpaces = triDepth - 1;
 
         for(int i = 0; i < triDepth; ++i) {
-            result += insertSpace(numSpaces);
+            result += helper.drawSpace(numSpaces);
             //For these kinds of triangles, we can reuse triangle
             //from previous exercise
-            result += drawHorizontalLine((i * 2) + 1);
+            result += helper.drawAsterisk((i * 2) + 1);
             if (i == triDepth - 1) {
                 break;
             }
@@ -32,8 +33,8 @@ public class DiamondExercises extends TriangleExercises {
         result += "\n";
 
         for(int i = depthToCentre - 2; i >= 0; --i) {
-            result += insertSpace(numSpaces);
-            result += drawHorizontalLine((i * 2) + 1);
+            result += helper.drawSpace(numSpaces);
+            result += helper.drawAsterisk((i * 2) + 1);
             if(i == 0) {
                 break;
             }
@@ -50,7 +51,8 @@ public class DiamondExercises extends TriangleExercises {
         int numSpaces = depth - 1;
 
         for(int i = 0; i < depth - 1; ++i) {
-            result += insertSpace(numSpaces) + drawHorizontalLine((i * 2) + 1);
+            result += helper.drawSpace(numSpaces) +
+                      helper.drawAsterisk((i * 2) + 1);
             result += "\n";
 
             --numSpaces;
@@ -60,8 +62,8 @@ public class DiamondExercises extends TriangleExercises {
         numSpaces = 1;
 
         for(int i = depth - 2; i >= 0; --i) {
-            result += insertSpace(numSpaces);
-            result += drawHorizontalLine((i * 2) + 1);
+            result += helper.drawSpace(numSpaces);
+            result += helper.drawAsterisk((i * 2) + 1);
             if(i == 0) {
                 break;
             }

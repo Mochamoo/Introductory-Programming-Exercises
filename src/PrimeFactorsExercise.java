@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class PrimeFactorsExercise {
 
     //Tells us if number is prime or not.
-    public boolean isNumPrime(int n) {
+    private boolean isNumPrime(int n) {
         /* We don't need to test beyond the square root of n
          * This is because if sqrt(n) == m, then that means
          * m*m == n. So if we test on anything beyond m, then
@@ -21,7 +21,7 @@ public class PrimeFactorsExercise {
         return true;
     }
 
-    public int getNextPrime(int curPrime) {
+    private int getNextPrime(int curPrime) {
         //First see if the prime number is even (2 is the
         //only even prime number, but doing it this way will
         //handle odd inputs, like 8, for instance
@@ -46,19 +46,19 @@ public class PrimeFactorsExercise {
         return curPrime;
     }
 
-    //Right now just return string, but later return list
-    public String getPrimeNumbers(int n) {
-        ArrayList<Integer> primeNums = new ArrayList();
+
+    public ArrayList getPrimeNumbers(int n) {
+        ArrayList<Integer> primeNums = new ArrayList<>();
         //Use this divisor to divide n and see if it fits
         int divisor = 2;
 
         //First take care of instant return cases
         if(n <= 1) {
-            return " ";
+            return primeNums;
         }
         else if(isNumPrime(n)) {
             primeNums.add(n);
-            return Integer.toString(n);
+            return primeNums;
         }
 
         //Now for main loop to get all prime numbers
@@ -81,15 +81,6 @@ public class PrimeFactorsExercise {
         //After the loop, add the last prime number
         primeNums.add(n);
 
-        String result = "";
-        for(int i = 0; i < primeNums.size(); ++i) {
-            result += primeNums.get(i).toString();
-            if(i == primeNums.size() - 1) {
-                break;
-            }
-            result += ", ";
-        }
-
-        return result;
+        return primeNums;
     }
 }

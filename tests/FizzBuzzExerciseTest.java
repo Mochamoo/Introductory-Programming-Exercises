@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class FizzBuzzExerciseTest {
-    FizzBuzzExercise fizz;
+    private FizzBuzzExercise fizz;
 
     @Before
     public void setUp() {
