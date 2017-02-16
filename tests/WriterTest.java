@@ -11,51 +11,19 @@ public class WriterTest {
     }
 
     @Test
-    public void drawAsteriskShouldDrawAsManyAsterisksAsInput() {
+    public void drawAsteriskShouldDrawAsManyAsterisksAsInputSpecified() {
         assertEquals("*****", writer.drawAsterisk(5));
     }
 
     @Test
-    public void drawSpaceShouldInsertAsManySpacesAsInput() {
+    public void drawSpaceShouldInsertAsManySpacesAsInputSpecified() {
         assertEquals("     ", writer.drawSpace(5));
     }
 
     @Test
-    public void drawVerticalLineShouldPutAsterisksOverNumberOfLinesAsInput() {
+    public void drawVerticalLineShouldPutAsterisksOverGivenAmountOfLines() {
         assertEquals("*\n" +
                      "*\n" +
                      "*", writer.drawVerticalLine(3));
-    }
-
-    @Test
-    public void drawRightTriangleShouldCreateTriangleOverNumberOfLinesAsInput() {
-        assertEquals("*\n" +
-                     "**\n" +
-                     "***", writer.drawRightTriangle(3));
-    }
-
-    @Test
-    public void drawIsoscelesTriangleShouldDrawSymmetricalTriangleWithNumberOfLinesAsInput() {
-        assertEquals("  *\n" +
-                     " ***\n" +
-                     "*****", writer.drawIsoscelesTriangle(3));
-    }
-
-    @Test
-    public void drawDiamondShouldDrawDiamondWithNumberOfLinesAsInput() {
-        assertEquals("  *\n" +
-                     " ***\n" +
-                     "*****\n" +
-                     " ***\n" +
-                     "  *", writer.drawDiamond(3));
-    }
-
-    @Test
-    public void drawDiamondWithNameShouldInsertNameIntoMiddleRowOfDiamond() {
-        assertEquals("  *\n" +
-                     " ***\n" +
-                     "Eugene\n" +
-                     " ***\n" +
-                     "  *", writer.drawDiamondWithName(3));
     }
 }
