@@ -20,7 +20,6 @@ public class WriterTest {
         assertEquals("     ", writer.drawSpace(5));
     }
 
-
     @Test
     public void drawVerticalLineShouldPutAsterisksOverNumberOfLinesAsInput() {
         assertEquals("*\n" +

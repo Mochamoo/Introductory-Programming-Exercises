@@ -14,17 +14,44 @@ public class PrimeFactorsTest {
     }
 
     @Test
+    public void isPrimeShouldReturnTrueWhenGivenPrime() {
+        assertEquals(true, prime.isPrime(17));
+    }
+
+    @Test
+    public void isPrimeShouldReturnFalseWhenGivenNonPrime() {
+        assertEquals(false, prime.isPrime(16));
+    }
+
+    @Test
+    public void getNextPrimeShouldReturnNextPrimeWhenGivenPrime() {
+        assertEquals(19, prime.getNextPrime(17));
+    }
+
+    @Test
+    public void getNextPrimeShouldReturnNextPrimeEvenWithNonPrime() {
+        assertEquals(19, prime.getNextPrime(18));
+    }
+
+    @Test
     public void generateShouldReturnEmptyListWhenGiven1() {
-        ArrayList<Integer> list = new ArrayList<>();
-        assertEquals(list, prime.generate(1));
+        ArrayList<Integer> emptyList = new ArrayList<>();
+        assertEquals(emptyList, prime.generate(1));
+    }
+
+    @Test
+    public void generateShouldReturnPrimeWhenGivenPrime() {
+        ArrayList<Integer> singlePrime = new ArrayList<>();
+        singlePrime.add(5);
+        assertEquals(singlePrime, prime.generate(5));
     }
 
     @Test
     public void generateShouldReturnPrimeFactorsOfNonPrime() {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(2);
-        list.add(3);
-        list.add(5);
-        assertEquals(list, prime.generate(30));
+        ArrayList<Integer> primeFactorsOf30 = new ArrayList<>();
+        primeFactorsOf30.add(2);
+        primeFactorsOf30.add(3);
+        primeFactorsOf30.add(5);
+        assertEquals(primeFactorsOf30, prime.generate(30));
     }
 }

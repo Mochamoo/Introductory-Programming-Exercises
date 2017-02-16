@@ -1,5 +1,5 @@
-//This class handles the triangle exercises. Each method will
-//represent one exercise
+//This class handles drawing. It can draw the shapes needed for the triangle and
+//diamond exercises.
 public class Writer {
     public String drawAsterisk(int numAsterisks) {
         return new String(new char[numAsterisks]).replace("\0", "*");
@@ -10,101 +10,98 @@ public class Writer {
     }
 
     public String drawVerticalLine(int numAsterisk) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         for(int i = 0; i < numAsterisk; ++i) {
-            result += drawAsterisk(1);
+            result.append(drawAsterisk(1));
 
             if(i == numAsterisk - 1) {
                 break;
             }
 
-            result += "\n";
+            result.append("\n");
         }
 
-        return result;
+        return result.toString();
     }
 
-    public String drawRightTriangle(int triDepth) {
-        String result = "";
+    public String drawRightTriangle(int triangleDepth) {
+        StringBuilder result = new StringBuilder();
 
-        for(int i = 0; i < triDepth; ++i) {
-            result += drawAsterisk(i + 1);
+        for(int i = 0; i < triangleDepth; ++i) {
+            result.append(drawAsterisk(i + 1));
 
-            if(i == triDepth - 1) {
+            if(i == triangleDepth - 1) {
                 break;
             }
 
-            result += "\n";
+            result.append("\n");
         }
 
-        return result;
+        return result.toString();
     }
 
-    public String drawIsoscelesTriangle(int triDepth) {
-        String result = "";
-        int numSpaces = triDepth - 1;
+    public String drawIsoscelesTriangle(int triangleDepth) {
+        StringBuilder result = new StringBuilder();
+        int numSpaces = triangleDepth - 1;
 
-        for(int i = 0; i < triDepth; ++i) {
-            result += drawSpace(numSpaces);
-            result += drawAsterisk((i * 2) + 1);
-            if (i == triDepth - 1) {
+        for(int i = 0; i < triangleDepth; ++i) {
+            result.append(drawSpace(numSpaces) + drawAsterisk((i * 2) + 1));
+            if (i == triangleDepth - 1) {
                 break;
             }
-            result += "\n";
+            result.append("\n");
             --numSpaces;
         }
 
-        return result;
+        return result.toString();
     }
 
     public String drawDiamond(int depthToCentre) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         int numSpaces = 1;
 
-        result = drawIsoscelesTriangle(depthToCentre);
-        result += "\n";
+        result.append(drawIsoscelesTriangle(depthToCentre) + "\n");
 
         for(int i = depthToCentre - 2; i >= 0; --i) {
-            result += drawSpace(numSpaces);
-            result += drawAsterisk((i * 2) + 1);
+            result.append(drawSpace(numSpaces));
+            result.append(drawAsterisk((i * 2) + 1));
             if(i == 0) {
                 break;
             }
-            result += "\n";
+            result.append("\n");
 
             ++numSpaces;
         }
 
-        return result;
+        return result.toString();
     }
 
-    public String drawDiamondWithName(int depth) {
-        String result = "";
-        int numSpaces = depth - 1;
+    public String drawDiamondWithName(int depthToCentre) {
+        StringBuilder result = new StringBuilder();
+        int numSpaces = depthToCentre - 1;
 
-        for(int i = 0; i < depth - 1; ++i) {
-            result += drawSpace(numSpaces) +
-                    drawAsterisk((i * 2) + 1);
-            result += "\n";
+        for(int i = 0; i < depthToCentre - 1; ++i) {
+            result.append(drawSpace(numSpaces) +
+                    drawAsterisk((i * 2) + 1) +
+                    "\n");
 
             --numSpaces;
         }
 
-        result += "Eugene\n";
+        result.append("Eugene\n");
         numSpaces = 1;
 
-        for(int i = depth - 2; i >= 0; --i) {
-            result += drawSpace(numSpaces);
-            result += drawAsterisk((i * 2) + 1);
+        for(int i = depthToCentre - 2; i >= 0; --i) {
+            result.append((drawSpace(numSpaces) + drawAsterisk((i * 2) + 1)));
             if(i == 0) {
                 break;
             }
-            result += "\n";
+            result.append("\n");
 
             ++numSpaces;
         }
 
-        return result;
+        return result.toString();
     }
 }

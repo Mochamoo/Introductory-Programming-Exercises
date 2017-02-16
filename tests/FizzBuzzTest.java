@@ -27,7 +27,7 @@ public class FizzBuzzTest {
                      "Fizz\n" +
                      "13\n" +
                      "14\n" +
-                     "FizzBuzz\n", fizz.fizzBuzzSample());
+                     "FizzBuzz\n", fizz.fizzBuzz(15));
     }
 
 }

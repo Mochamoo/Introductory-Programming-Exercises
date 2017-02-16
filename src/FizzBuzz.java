@@ -1,45 +1,23 @@
 public class FizzBuzz {
-    public String fizzBuzzSample() {
-        String result = "";
+    public String fizzBuzz(int limit) {
+        StringBuilder result = new StringBuilder();
 
-        for(int i = 1; i <= 15; ++i) {
+        for(int i = 1; i <= limit; ++i) {
             if((i % 3 == 0) || (i % 5 == 0)) {
                 if(i % 3 == 0) {
-                    result += "Fizz";
+                    result.append("Fizz");
                 }
                 if(i % 5 == 0) {
-                    result += "Buzz";
+                    result.append("Buzz");
                 }
             }
             else {
-                result += Integer.toString(i);
+                result.append(Integer.toString(i));
             }
 
-            result += "\n";
+            result.append("\n");
         }
 
-        return result;
-    }
-
-    public String fizzBuzz() {
-        String result = "";
-
-        for(int i = 1; i <= 100; ++i) {
-            if((i % 3 == 0) || (i % 5 == 0)) {
-                if(i % 3 == 0) {
-                    result += "Fizz";
-                }
-                if(i % 5 == 0) {
-                    result += "Buzz";
-                }
-            }
-            else {
-                result += Integer.toString(i);
-            }
-
-            result += "\n";
-        }
-
-        return result;
+        return result.toString();
     }
 }
