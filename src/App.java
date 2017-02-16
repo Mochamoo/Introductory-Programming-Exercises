@@ -13,11 +13,11 @@ public class App {
         System.out.println("2)\n" + dia.drawDiamond(3) + "\n");
         System.out.println("3)\n" + dia.drawDiamondWithName(3) + "\n\n");
 
-        FizzBuzzExercise fizz = new FizzBuzzExercise();
+        FizzBuzz fizz = new FizzBuzz();
         System.out.println("===Fizz Buzz Exercise===");
         System.out.println(fizz.fizzBuzz() + "\n\n");
 
-        PrimeFactorsExercise prime = new PrimeFactorsExercise();
+        PrimeFactors prime = new PrimeFactors();
         System.out.println("===Prime Factors Exercise===");
         System.out.println(prime.generate(30) + "\n");*/
 

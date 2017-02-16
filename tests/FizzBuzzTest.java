@@ -3,12 +3,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class FizzBuzzExerciseTest {
-    private FizzBuzzExercise fizz;
+public class FizzBuzzTest {
+    private FizzBuzz fizz;
 
     @Before
     public void setUp() {
-        fizz = new FizzBuzzExercise();
+        fizz = new FizzBuzz();
     }
 
     @Test

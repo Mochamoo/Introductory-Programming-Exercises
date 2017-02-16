@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class PrimeFactorsExerciseTest {
-    private PrimeFactorsExercise prime;
+public class PrimeFactorsTest {
+    private PrimeFactors prime;
 
     @Before
     public void setup() {
-        prime = new PrimeFactorsExercise();
+        prime = new PrimeFactors();
     }
 
     @Test

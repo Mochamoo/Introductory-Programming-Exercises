@@ -1,4 +1,4 @@
-public class FizzBuzzExercise {
+public class FizzBuzz {
     public String fizzBuzzSample() {
         String result = "";
 

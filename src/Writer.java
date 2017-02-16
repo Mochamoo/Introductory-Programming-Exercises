@@ -9,22 +9,12 @@ public class Writer {
         return new String(new char[numSpaces]).replace("\0", " ");
     }
 
-    public String easiestExerciseEver() {
-        return drawAsterisk(1);
-    }
-
-    public String drawHorizontalLine(int numAsterisk) {
-        return drawAsterisk(numAsterisk);
-    }
-
     public String drawVerticalLine(int numAsterisk) {
         String result = "";
 
         for(int i = 0; i < numAsterisk; ++i) {
             result += drawAsterisk(1);
 
-            //This just does away with newline for last * so we
-            //don't get an extra newline and can use println()
             if(i == numAsterisk - 1) {
                 break;
             }
@@ -57,8 +47,6 @@ public class Writer {
 
         for(int i = 0; i < triDepth; ++i) {
             result += drawSpace(numSpaces);
-            //For these kinds of triangles, we can reuse triangle
-            //from previous exercise
             result += drawAsterisk((i * 2) + 1);
             if (i == triDepth - 1) {
                 break;
