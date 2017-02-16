@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
     private FizzBuzz fizz;
@@ -12,10 +12,22 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void testFizzBuzzSample() {
-        String expected = "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\n" +
-                "Fizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n";
-        assertEquals(expected, fizz.fizzBuzzSample());
+    public void fizzBuzzShouldFizzAndBuzzOnNumbersDivisibleByThreeAndFive() {
+        assertEquals("1\n" +
+                     "2\n" +
+                     "Fizz\n" +
+                     "4\n" +
+                     "Buzz\n" +
+                     "Fizz\n" +
+                     "7\n" +
+                     "8\n" +
+                     "Fizz\n" +
+                     "Buzz\n" +
+                     "11\n" +
+                     "Fizz\n" +
+                     "13\n" +
+                     "14\n" +
+                     "FizzBuzz\n", fizz.fizzBuzzSample());
     }
 
 }

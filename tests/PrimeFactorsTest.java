@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class PrimeFactorsTest {
     private PrimeFactors prime;
@@ -14,12 +14,14 @@ public class PrimeFactorsTest {
     }
 
     @Test
-    public void testGenerate() {
-        //If input is 1, should get back an empty list
+    public void generateShouldReturnEmptyListWhenGiven1() {
         ArrayList<Integer> list = new ArrayList<>();
         assertEquals(list, prime.generate(1));
+    }
 
-        //Now test with 30 as input
+    @Test
+    public void generateShouldReturnPrimeFactorsOfNonPrime() {
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(2);
         list.add(3);
         list.add(5);

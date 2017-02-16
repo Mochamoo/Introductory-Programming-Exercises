@@ -1,6 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class WriterTest {
     private Writer writer;
@@ -11,49 +11,52 @@ public class WriterTest {
     }
 
     @Test
-    public void drawAsteriskShouldDrawFiveAsteriskWhenGivenFive() throws Exception {
+    public void drawAsteriskShouldDrawAsManyAsterisksAsInput() {
         assertEquals("*****", writer.drawAsterisk(5));
     }
 
     @Test
-    public void drawSpaceShouldInsertFiveSpacesWhenGivenFive() {
+    public void drawSpaceShouldInsertAsManySpacesAsInput() {
         assertEquals("     ", writer.drawSpace(5));
     }
 
+
     @Test
-    public void drawAsteriskShouldDrawOneAsteriskWhenInputIsOne() {
-        assertEquals("*", writer.drawAsterisk(1));
+    public void drawVerticalLineShouldPutAsterisksOverNumberOfLinesAsInput() {
+        assertEquals("*\n" +
+                     "*\n" +
+                     "*", writer.drawVerticalLine(3));
     }
 
     @Test
-    public void drawAsteriskShouldReturnEightAsterisksWhenInputIsEight() {
-        assertEquals("********", writer.drawAsterisk(8));
+    public void drawRightTriangleShouldCreateTriangleOverNumberOfLinesAsInput() {
+        assertEquals("*\n" +
+                     "**\n" +
+                     "***", writer.drawRightTriangle(3));
     }
 
     @Test
-    public void drawVerticalLineShouldPutAsterisksOverThreeLinesWhenInputIsThree() {
-        assertEquals("*\n*\n*", writer.drawVerticalLine(3));
+    public void drawIsoscelesTriangleShouldDrawSymmetricalTriangleWithNumberOfLinesAsInput() {
+        assertEquals("  *\n" +
+                     " ***\n" +
+                     "*****", writer.drawIsoscelesTriangle(3));
     }
 
     @Test
-    public void drawRightTriangleShouldCreateTriangleOverThreeLinesWhenInputIsThree() {
-        assertEquals("*\n**\n***", writer.drawRightTriangle(3));
+    public void drawDiamondShouldDrawDiamondWithNumberOfLinesAsInput() {
+        assertEquals("  *\n" +
+                     " ***\n" +
+                     "*****\n" +
+                     " ***\n" +
+                     "  *", writer.drawDiamond(3));
     }
 
     @Test
-    public void drawIsoscelesTriangleShouldDrawSymmetricalThreeLayeredTriangleWhenInputIsThree() {
-        assertEquals("  *\n ***\n*****", writer.drawIsoscelesTriangle(3));
-    }
-
-    @Test
-    public void drawDiamondShouldDrawDiamondWithSixLayersWhenInputIsThree() {
-        String expected = "  *\n ***\n*****\n ***\n  *";
-        assertEquals(expected, writer.drawDiamond(3));
-    }
-
-    @Test
-    public void drawDiamondWithNameShouldDrawDiamondWithNameInThirdRowWhenInputIsThree() {
-        String expected = "  *\n ***\nEugene\n ***\n  *";
-        assertEquals(expected, writer.drawDiamondWithName(3));
+    public void drawDiamondWithNameShouldInsertNameIntoMiddleRowOfDiamond() {
+        assertEquals("  *\n" +
+                     " ***\n" +
+                     "Eugene\n" +
+                     " ***\n" +
+                     "  *", writer.drawDiamondWithName(3));
     }
 }
