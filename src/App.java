@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) {
-        TriangleExercises tri = new TriangleExercises();
+        /*Writer writer = new Writer();
         System.out.println("===Triangle Exercises===");
         System.out.println("1)\n" + tri.easiestExerciseEver() + "\n");
         System.out.println("2)\n" + tri.drawHorizontalLine(8) + "\n");
@@ -19,7 +19,7 @@ public class App {
 
         PrimeFactorsExercise prime = new PrimeFactorsExercise();
         System.out.println("===Prime Factors Exercise===");
-        System.out.println(prime.generate(30) + "\n");
+        System.out.println(prime.generate(30) + "\n");*/
 
     }
 
